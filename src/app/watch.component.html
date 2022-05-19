@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            .space{
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="color: rgb(42, 165, 77);">
+            <h2>{{pageTitle}}</h2> 
+        </header>
+        <main>
+          
+           <div>
+            <h1 class="space" style="color: rgb(255, 0, 0);">
+                {{hour}} :{{min}} : {{sec}}
+            </h1>
+            </div>
+            <div >
+            <button class="space" (click)="start()">
+                Start 
+            </button>
+            <button class="space" (click)="pause()">
+                Pause/Play
+            </button>
+            <button  class="space"(click)="record()" >
+                 Record
+            </button>
+            <button class="space" (click)="reset()">
+                Reset 
+            </button>
+        </div>
+        <table *ngFor="let x of rec">
+            <td>
+                {{x}}
+            </td>
+
+        </table>
+        
+        </main>
+
+        <footer style="color: blue;">
+             &copy;Caizin
+
+        </footer>
+
+
+
+    </body>
+
+</html>
